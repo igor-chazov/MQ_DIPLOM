@@ -1,0 +1,38 @@
+@font-face {
+  font-family: "OpenSans";
+  font-display: swap;
+  src: url("../fonts/OpenSans-Regular.woff") format("woff"), url("../fonts/OpenSans-Regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
+@font-face {
+  font-family: "OpenSans";
+  src: url("../fonts/OpenSans-Bold.woff") format("woff"), url("../fonts/OpenSans-Bold.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "OpenSans", sans-serif;
+  font-size: 1.3rem;
+  min-width: 320px;
+  margin: 0;
+  background-color: #fff;
+}
+
+body p {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+@import "_popab";
+@import "_header";
+@import "_page";
+@import "_page1main";
+@import "_page2aside";
+@import "_page3";
+@import "_footer";

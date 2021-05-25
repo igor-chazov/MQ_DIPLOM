@@ -1,0 +1,251 @@
+.aside__slide-bar {
+  width: calc(32.05% - 10rem);
+  margin-left: 10rem;
+}
+
+.aside__section {
+  padding-bottom: 6rem;
+}
+
+.slide-bar__title {
+  font-size: 1.4rem;
+  color: #0f0d0e;
+}
+
+.latest-posts {
+  display: flex;
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.latest-posts:nth-child(1) {
+  margin-top: 0;
+}
+
+.latest-posts__imgbox {
+  width: 25.455%;
+}
+
+.latest-posts__img {
+  display: block;
+  width: 100%;
+  background-color: #f4f7f6;
+}
+
+.latest-posts__info {
+  width: calc(74.545% - 1.5rem);
+  margin-left: 1.5rem;
+}
+
+.latest-posts__data {
+  font-size: 1.2rem;
+  color: #888888;
+}
+
+.latest-posts__content {
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.latest-posts__name {
+  margin-top: 0.5rem;
+  margin-bottom: 0;
+}
+
+.latest-posts__link {
+  font-size: 1.4rem;
+}
+
+.slide-bar__form {
+  display: flex;
+  align-items: flex-end;
+  margin-top: 6rem;
+  width: 100%;
+}
+
+.form__search {
+  width: 100%;
+}
+
+.visually-hidden {
+  width: 1px;
+  height: 1px;
+  clip: rect(1px 1px 1px 1px);
+  position: absolute;
+}
+
+.search__field {
+  box-sizing: border-box;
+  display: block;
+  font-size: 1.3rem;
+  width: 100%;
+  font-family: inherit;
+  background-color: #f5f7f6;
+  border: none;
+  padding: 1.6rem 1.5rem;
+}
+
+.search__field:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #ae9e5f inset;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.button__search {
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+}
+
+.button__img {
+  display: block;
+  width: 2rem;
+  height: 2rem;
+}
+
+/* section__subscribe */
+
+.section__header::after {
+  margin-bottom: 2rem;
+}
+
+.section__title::after {
+  margin-bottom: 2rem;
+}
+
+.email__action {
+  margin-top: 1.5rem;
+}
+
+/* section__tags */
+
+.menu-tags__list {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.menu-tags__item {
+  width: calc(33.333% - 0.5rem);
+  text-align: center;
+  margin-top: 0.5rem;
+}
+
+.menu-tags__item:nth-child(1),
+.menu-tags__item:nth-child(2),
+.menu-tags__item:nth-child(3) {
+  margin-top: 0;
+}
+
+.menu-tags__item:nth-child(3n + 1) {
+  margin-left: 0;
+}
+
+.menu-tags__item:nth-child(3n + 2),
+.menu-tags__item:nth-child(3n + 3) {
+  margin-left: 0.5rem;
+}
+
+.menu-tags__link {
+  display: block;
+  font-size: 1.2rem;
+  font-weight: 700;
+  color: #0f0d0e;
+  text-transform: uppercase;
+  text-decoration: none;
+  color: inherit;
+  padding: 0.5rem 0;
+  border: 3px solid #eeeeee;
+  transition: border 0.3s ease-out, color 0.3s ease-out;
+}
+
+.menu-tags__link:hover {
+  text-decoration: none;
+  border: 3px solid #b59f5b;
+}
+
+/* section__categories */
+
+.aside__section:last-child {
+  padding-bottom: 0;
+}
+
+.menu-categories__list {
+  display: flex;
+  flex-direction: column;
+}
+
+.menu-categories .menu-categories__item {
+  margin-left: 0;
+}
+
+.menu-categories__item {
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid #eeeeee;
+}
+
+.menu-categories__item:nth-child(1) {
+  padding-top: 0;
+}
+
+.menu-categories__link {
+  font-size: 1.4rem;
+  font-weight: 700;
+  text-transform: none;
+  text-decoration: none;
+  color: inherit;
+  transition: color 0.3s ease-out, color 0.3s ease-out;
+}
+
+.menu-categories__link:hover {
+  color: #b59f5b;
+  text-decoration: none;
+}
+
+.submenu__item {
+  margin-left: 0.5rem;
+  font-size: 1.2rem;
+  color: #b59f5b;
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .aside__slide-bar {
+    width: calc(43.572% - 3.5rem);
+    margin-left: 3.5rem;
+  }
+
+  h2.slide-bar__title {
+    font-size: 1.4rem;
+  }
+
+  .menu-tags__link {
+    font-size: calc(1rem + 2 * (100vw - 641px) / 559);
+  }
+}
+
+@media (max-width: 640px) {
+  .aside__slide-bar {
+    width: 100%;
+    margin-left: 0;
+  }
+
+  .menu-tags__item {
+    width: calc(25% - 0.5rem);
+  }
+
+  .menu-tags__item:nth-child(4) {
+    margin-top: 0;
+  }
+
+  .menu-tags__item:nth-child(4n + 5) {
+    margin-left: 0;
+  }
+
+  .menu-tags__item:nth-child(4),
+  .menu-tags__item:nth-child(7),
+  .menu-tags__item:nth-child(10),
+  .menu-tags__item:nth-child(16) {
+    margin-left: 0.5rem;
+  }
+}

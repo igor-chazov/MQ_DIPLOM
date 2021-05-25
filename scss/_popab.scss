@@ -1,0 +1,250 @@
+.popup {
+  box-sizing: border-box;
+  width: 100%;
+  height: 100vh;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
+  background-color: rgba(0, 0, 0, 0.6);
+  overflow-y: auto;
+  overflow-x: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  animation: fade 0.6s;
+  display: none;
+}
+
+.popup__container {
+  box-sizing: border-box;
+  max-width: 390px;
+  width: 100%;
+  padding: 5.5rem 3rem;
+  margin: auto;
+  background-color: #fff;
+  position: relative;
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.22), 0 19px 60px rgba(0, 0, 0, 0.3);
+  animation: fade 0.6s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page__header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.page__header::after {
+  content: "";
+  width: 6.6rem;
+  height: 0.3rem;
+  background-color: #ae9e5f;
+  margin-bottom: 2.5rem;
+}
+
+.page__title {
+  margin-top: 0;
+  margin-bottom: 0.5rem;
+  font-size: 2rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #3c3c3c;
+}
+
+.form__group {
+  margin-bottom: 2.5rem;
+}
+
+.form__select {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.select {
+  display: inline-block;
+  box-sizing: border-box;
+  font-family: inherit;
+  font-size: inherit;
+  width: 100%;
+  border: none;
+  background-color: #f5f7f6;
+  color: #9a9b9b;
+  padding: 1.7rem 2.5rem 1.7rem 1.8rem;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  background-image: url("../svg/form-arrows.svg");
+  background-repeat: no-repeat;
+  background-position: right 1.3rem center;
+  background-size: 0.9rem 1.8rem;
+}
+
+.select:focus,
+.field__textarea:focus {
+  outline: none;
+  box-shadow: 0 0 0 1px #ae9e5f inset;
+  transition: box-shadow 0.3s ease-out;
+}
+
+.radio__title {
+  padding-top: 0.6rem;
+  margin-bottom: 0.9rem;
+}
+
+.radio__row {
+  display: flex;
+  flex-direction: row;
+}
+
+.radio__group::before {
+  content: "";
+  display: inline-block;
+  vertical-align: middle;
+  width: 2rem;
+  height: 2rem;
+  background-image: url("../svg/form-empty-circle.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 2rem;
+}
+
+.radio__group:last-child {
+  margin-left: 1.5rem;
+}
+
+.radio-label {
+  vertical-align: middle;
+  margin-left: 0.4rem;
+}
+
+.radio:checked + .radio__group::before {
+  background-image: url("../svg/form-circle.svg");
+}
+
+.radio {
+  position: absolute;
+  clip: rect(1px 1px 1px 1px);
+  width: 1px;
+  height: 1px;
+}
+
+.field__title {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+.field__textarea {
+  display: block;
+  box-sizing: border-box;
+  width: 100%;
+  height: 13rem;
+  resize: none;
+  font-family: inherit;
+  font-size: 1.3rem;
+  background-color: #f5f7f6;
+  border: none;
+  padding: 2rem 2.1rem 0;
+}
+
+.button {
+  width: 100%;
+  padding-top: 1.5rem;
+  padding-bottom: 1.5rem;
+  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: inherit;
+  transition: background-color 0.3s ease-out, color 0.3s ease-out;
+  background-color: #ae9e5f;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+}
+
+.button:hover {
+  background-color: #353535;
+}
+
+/* button close */
+
+.popup__close {
+  width: 2rem;
+  height: 2rem;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  position: absolute;
+  top: -2.6rem;
+  right: 0;
+}
+
+.popup__svg {
+  display: block;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.popup__close > .popup__svg:hover {
+  fill: #ae9e5f;
+}
+
+@media (min-width: 641px) and (max-width: 1200px) {
+  .page__title {
+    font-size: 1.8rem;
+  }
+
+  .radio__group::before {
+    width: 3rem;
+    height: 3rem;
+    background-size: 3rem;
+  }
+
+  .popup__close {
+    width: 3rem;
+    height: 3rem;
+    top: -3.8rem;
+  }
+
+  .popup__close:before {
+    width: 3rem;
+    height: 3rem;
+    background-size: 3rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .popup__container {
+    width: 33rem;
+    padding: 3rem 2.5rem;
+  }
+
+  .page__title {
+    font-size: 1.6rem;
+  }
+
+  .radio__group::before {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 2.5rem;
+  }
+
+  .popup__close {
+    width: 2.5rem;
+    height: 2.5rem;
+    top: -3.3rem;
+  }
+
+  .popup__close:before {
+    width: 2.5rem;
+    height: 2.5rem;
+    background-size: 2.5rem;
+  }
+}
